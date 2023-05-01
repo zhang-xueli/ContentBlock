@@ -24,7 +24,7 @@ const Content = (props: ContentProps): JSX.Element => {
       </div>
       {hasImage &&
       (props.imagePosition == ContentImagePosition.Bottom ||
-        ContentImagePosition.Right) ? (
+        props.imagePosition == ContentImagePosition.Right) ? (
         <div className={imageContainerClass}>
           <Image field={props.image} />
         </div>
