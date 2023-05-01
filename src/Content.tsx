@@ -7,8 +7,8 @@ const Content = (props: ContentProps): JSX.Element => {
     hasImage &&
     (props.imagePosition == ContentImagePosition.Top ||
       props.imagePosition == ContentImagePosition.Bottom)
-      ? "col-6"
-      : "col-12";
+      ? "col-12"
+      : "col-6";
   const contentContainerClass = imageContainerClass;
   return (
     <div className="content row">
