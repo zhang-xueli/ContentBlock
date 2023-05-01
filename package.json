@@ -1,0 +1,19 @@
+{
+  "name": "contentblock",
+  "version": "1.0.0",
+  "description": "This is a JSS Component",
+  "main": "lib/ContentBlock.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sitecore-jss/sitecore-jss-react": "^21.1.1",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.2",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "typescript": "^5.0.4"
+  }
+}
