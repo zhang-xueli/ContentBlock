@@ -2,7 +2,7 @@
   "name": "contentblock",
   "version": "1.0.0",
   "description": "This is a JSS Component",
-  "main": "lib/ContentBlock.js",
+  "main": "lib/Content.js",
   "scripts": {
     "build": "npx tsc"
   },
