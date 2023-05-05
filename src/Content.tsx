@@ -34,3 +34,7 @@ const Content = (props: ContentProps): JSX.Element => {
 };
 
 export default Content;
+
+export const NoImage = (props: ContentProps): JSX.Element => {
+  return <RichText field={props.content} />;
+};
