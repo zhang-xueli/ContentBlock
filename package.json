@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a JSS Component",
   "main": "lib/Content.js",
+  "type": "module",
   "scripts": {
     "build": "npx tsc",
     "storybook": "storybook dev -p 6006",

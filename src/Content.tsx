@@ -32,7 +32,6 @@ const Content = (props: ContentProps): JSX.Element => {
     </div>
   );
 };
-
 export default Content;
 
 export const NoImage = (props: ContentProps): JSX.Element => {
