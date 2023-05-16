@@ -2,7 +2,7 @@
   "name": "contentblock",
   "version": "1.0.0",
   "description": "This is a JSS Component",
-  "main": "lib/Content.js",
+  "main": "lib/Index.js",
   "type": "module",
   "scripts": {
     "build": "npx tsc",
