@@ -6,11 +6,13 @@ declare const meta: {
     component: (props: import("../Content.types").ContentProps) => JSX.Element;
     tags: string[];
     argTypes: {
-        imagePosition: {
-            options: (string | ContentImagePosition)[];
-            mapping: typeof ContentImagePosition;
-            control: {
-                type: string;
+        fields: {
+            imagePosition: {
+                options: (string | ContentImagePosition)[];
+                mapping: typeof ContentImagePosition;
+                control: {
+                    type: string;
+                };
             };
         };
     };

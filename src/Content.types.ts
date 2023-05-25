@@ -1,9 +1,11 @@
 import { ImageField, RichTextField } from "@sitecore-jss/sitecore-jss-react";
 
 export type ContentProps = {
-  content: RichTextField;
-  image?: ImageField;
-  imagePosition?: ContentImagePosition;
+  fields: {
+    content: RichTextField;
+    image?: ImageField;
+    imagePosition?: ContentImagePosition;
+  };
 };
 
 export enum ContentImagePosition {
