@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: check out
-      uses: actions/checkout@3
+      uses: actions/checkout@v3
     - name: Build the solution
       uses: cake-build/cake-action@v1
       with:
