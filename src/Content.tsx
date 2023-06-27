@@ -7,16 +7,11 @@ const Content = (props: ContentProps): JSX.Element => {
   let imagePosition = ContentImagePosition.Left;
   //@ts-ignore
   const imagePositionParam = props?.params?.imagePosition;
-  switch (imagePositionParam) {
-    case "Right":
-      imagePosition = ContentImagePosition.Right;
-      break;
-    case "Top":
-      imagePosition = ContentImagePosition.Top;
-      break;
-    case "Bottom":
-      imagePosition = ContentImagePosition.Bottom;
-      break;
+  if (!!imagePositionParam) {
+    imagePosition =
+      ContentImagePosition[
+        imagePositionParam as keyof typeof ContentImagePosition
+      ];
   }
   const imageContainerClass =
     hasImage &&
