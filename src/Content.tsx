@@ -1,20 +1,35 @@
 import { Image, RichText } from "@sitecore-jss/sitecore-jss-react";
 import { ContentImagePosition, ContentProps } from "./Content.types";
+import { ComponentProps } from "react";
 
 const Content = (props: ContentProps): JSX.Element => {
   const hasImage = !!props.fields?.image;
+  let imagePosition = ContentImagePosition.Left;
+  //@ts-ignore
+  const imagePositionParam = props?.params?.imagePosition;
+  switch (imagePositionParam) {
+    case "Right":
+      imagePosition = ContentImagePosition.Right;
+      break;
+    case "Top":
+      imagePosition = ContentImagePosition.Top;
+      break;
+    case "Bottom":
+      imagePosition = ContentImagePosition.Bottom;
+      break;
+  }
   const imageContainerClass =
     hasImage &&
-    (props.fields?.imagePosition == ContentImagePosition.Top ||
-      props.fields?.imagePosition == ContentImagePosition.Bottom)
+    (imagePosition == ContentImagePosition.Top ||
+      imagePosition == ContentImagePosition.Bottom)
       ? "col-12"
       : "col-6";
   const contentContainerClass = imageContainerClass;
   return (
     <div className="content row">
       {hasImage &&
-      (props.fields?.imagePosition == ContentImagePosition.Top ||
-        props.fields?.imagePosition == ContentImagePosition.Left) ? (
+      (imagePosition == ContentImagePosition.Top ||
+        imagePosition == ContentImagePosition.Left) ? (
         <div className={imageContainerClass}>
           <Image field={props.fields?.image} />
         </div>
@@ -23,8 +38,8 @@ const Content = (props: ContentProps): JSX.Element => {
         <RichText field={props.fields?.content} />
       </div>
       {hasImage &&
-      (props.fields?.imagePosition == ContentImagePosition.Bottom ||
-        props.fields?.imagePosition == ContentImagePosition.Right) ? (
+      (imagePosition == ContentImagePosition.Bottom ||
+        imagePosition == ContentImagePosition.Right) ? (
         <div className={imageContainerClass}>
           <Image field={props.fields?.image} />
         </div>
